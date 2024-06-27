@@ -1,11 +1,10 @@
-from PIL import Image
 import numpy as np
+from PIL import Image
 
 def load_image(image_path):
     image = Image.open(image_path)
-    image_array = np.array(image)
-    return image_array
+    return np.array(image)
 
-def save_image(image_array, output_path):
+def save_image(image_array, save_path):
     image = Image.fromarray(image_array)
-    image.save(output_path)
+    image.save(save_path)
